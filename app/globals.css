@@ -1,0 +1,334 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --gradient-color-bg:linear-gradient(180deg,rgb(65, 24, 40)0%,
+                                             rgb(2, 33, 60)20%,
+                                             rgb(26, 55, 77)100%); 
+}
+
+.logo_box{
+  width: 10.2rem;
+  position: relative;
+  cursor: pointer;
+}
+.logo{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  color: transparent;
+  -webkit-text-stroke: 0.1vw #770753;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, hsl(353, 92%, 49%) 0%, 
+                                     rgb(89, 253, 29) 50%, 
+                                     rgb(216, 236, 37) 100%);
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  transition: .6s;
+  animation: moveText 4s linear infinite;
+  animation-delay: 1s;
+}
+.logo::before{
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -3px;
+  width: 0;
+  height: 70%;
+  border-right: 2px solid #8e8989;
+  animation: moveCursorText 4s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes moveText{
+  0%,10%,100%{
+  background-position: -13rem 0;
+  }
+  65%,85%{
+  background-position: 0rem 0;
+  }
+  }
+@keyframes moveCursorText{
+  0%,10%,100%{
+  width: 0;
+  }
+  65%,78%,85%{
+  width: 100%;
+  opacity: 1;
+  }
+  75%,85%{
+  opacity: 0;
+  }
+  }
+
+
+/* hero image styling and animations */
+
+
+.heroImg{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-top: 50px;
+}
+.imgBox{
+  position: relative;
+  animation: floatImage 4s ease-in-out infinite;
+  animation-delay: 3s;
+}
+.imgBox>img{
+  position: relative;
+  top: -46px;
+  left: -8.9px;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  z-index: 10;
+}
+.rotateText{
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  top: 20px;
+  left: -22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 2rem;
+  font-family: Poppins;
+  
+}
+.rotateText span{
+  position: relative;
+  width: 438px;
+  height: 438px;
+  /* background: red; */
+  border: 6px solid #746868;
+  border-radius: 50%;
+  z-index: 1;
+  overflow: hidden;
+}
+.rotateText span::before{
+  content: "";
+  position: absolute;
+  inset: 20px;
+  background: #00000057;
+  border-radius: 50%;
+  z-index: 1;
+}
+.rotateText span i{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,rgb(65, 24, 40)0%,
+  rgb(2, 33, 60)20%,
+  rgb(26, 55, 77)100%);;
+  filter: blur(5px);
+  animation: animate 3s linear infinite;
+}
+.rotateText .text{
+  position: absolute;
+  width: 488px;
+  height: 488px;
+  background: #746868;
+  border-radius: 50%;
+  box-shadow: 0 1px 6px 5.94px rgba(0,0,0,0.2);
+  animation: rotateText 30s linear infinite;
+}
+.text>p{
+  color: #dfe6f1;
+}
+.text b{
+  position: absolute;
+  transform-origin: 0 245px;
+  display: block;
+  top: 0;
+  left: 50%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+/* responsive custom styling  */
+@media only screen and (max-width: 1270px){
+  .imgBox>img{
+    width: 475px;
+    top: -42px;
+    left: -6px;
+}
+}
+
+@media only screen and (max-width: 1100px){
+  .imgBox>img{
+    width: 475px;
+    top: -42px;
+    left: -6px;
+}
+}
+
+@media only screen and (max-width: 766px){
+  .imgBox>img{
+    top: -41px;
+    left: -7px;
+}
+}
+
+@media only screen and (max-width: 550px){
+  .imgBox>img{
+      width: 390px;
+      top: -40px;
+      left: -9.3px;
+  }
+  .rotateText{
+    width: 520px;
+    height: 520px;
+    top: -7.8%;
+    left: -68px;
+}
+.rotateText .text{
+    width: 400px;
+    height: 400px;
+}
+.rotateText span{
+    width: 365px;
+    height: 365px;
+}
+.text b{
+    top: -5px;
+    transform-origin: 0 205px;
+}
+}
+
+@media only screen and (max-width: 390px){
+  .imgBox>img{
+      width: 350px;
+      top: -32px;
+      left: -3px;
+  }
+  .rotateText {
+    width: 500px;
+    height: 500px;
+    top: -10.8%;
+    left: -73px;
+}
+.rotateText .text {
+    width: 340px;
+    height: 340px;
+}
+.rotateText span {
+    width: 307px;
+    height: 307px;
+}
+.text b {
+    top: -5px;
+    transform-origin: 0 175px;
+}
+}
+
+
+/* ==== Animation of Rotating Text hero section ==== */
+
+@keyframes animate{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateText{
+  0%{
+      transform: rotate(360deg);
+  }
+  100%{
+      transform: rotate(0deg);
+  }
+}
+
+@keyframes floatImage{
+  0%{
+      transform: translateY(0);
+  }
+  50%{
+      transform: translateY(-22px);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+
+
+
+@layer base {
+  :root {
+    --background:0 0% 100%;
+    --foreground:222.2 84% 4.9%;
+    --card:0 0% 100%;
+    --card-foreground:222.2 84% 4.9%;
+    --popover:0 0% 100%;
+    --popover-foreground:222.2 84% 4.9%;
+    --primary:222.2 47.4% 11.2%;
+    --primary-foreground:210 40% 98%;
+    --secondary:210 40% 96.1%;
+    --secondary-foreground:222.2 47.4% 11.2%;
+    --muted:210 40% 96.1%;
+    --muted-foreground:215.4 16.3% 46.9%;
+    --accent:210 40% 96.1%;
+    --accent-foreground:222.2 47.4% 11.2%;
+    --destructive:0 84.2% 60.2%;
+    --destructive-foreground:210 40% 98%;
+    --border:214.3 31.8% 91.4%;
+    --input:214.3 31.8% 91.4%;
+    --ring:222.2 84% 4.9%;
+    --chart-1:12 76% 61%;
+    --chart-2:173 58% 39%;
+    --chart-3:197 37% 24%;
+    --chart-4:43 74% 66%;
+    --chart-5:27 87% 67%;
+    --radius:0.5rem; 
+  }
+  .dark {
+    --background:222.2 84% 4.9%;
+    --foreground:210 40% 98%;
+    --card:222.2 84% 4.9%;
+    --card-foreground:210 40% 98%;
+    --popover:222.2 84% 4.9%;
+    --popover-foreground:210 40% 98%;
+    --primary:210 40% 98%;
+    --primary-foreground:222.2 47.4% 11.2%;
+    --secondary:217.2 32.6% 17.5%;
+    --secondary-foreground:210 40% 98%;
+    --muted:217.2 32.6% 17.5%;
+    --muted-foreground:215 20.2% 65.1%;
+    --accent:217.2 32.6% 17.5%;
+    --accent-foreground:210 40% 98%;
+    --destructive:0 62.8% 30.6%;
+    --destructive-foreground:210 40% 98%;
+    --border:217.2 32.6% 17.5%;
+    --input:217.2 32.6% 17.5%;
+    --ring:212.7 26.8% 83.9%;
+    --chart-1:220 70% 50%;
+    --chart-2:160 60% 45%;
+    --chart-3:30 80% 55%;
+    --chart-4:280 65% 60%;
+    --chart-5:340 75% 55%; 
+  } 
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50; 
+  }
+  body {
+    @apply bg-background text-foreground; 
+  } 
+}
