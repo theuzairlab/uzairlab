@@ -122,27 +122,6 @@ const NavBar = () => {
               </li>
             ))}
           </ul>
-
-          {/* Social Links */}
-          <div className="flex justify-center space-x-4 mt-10">
-            {[
-              { icon: <Linkedin />, link: "https://www.linkedin.com/feed/" },
-              { icon: <Twitter />, link: "https://twitter.com/home" },
-              { icon: <Facebook />, link: "https://www.facebook.com/" },
-              { icon: <Instagram />, link: "https://www.instagram.com/uzairuzair40/" },
-              { icon: <Github />, link: "https://github.com/Uzairmalik1" },
-            ].map(({ icon, link }, index) => (
-              <a
-                key={index}
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-gray-800 hover:bg-[#C9F31D] hover:text-black transition-all"
-              >
-                {icon}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
 
