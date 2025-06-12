@@ -42,8 +42,8 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, and Ta
    ```
 
 3. **Run the development server**
-   ```bash
-   npm run dev
+```bash
+npm run dev
    ```
 
 4. **Open your browser**
@@ -120,8 +120,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Uzair Ullah**
 - Website: [theuzairlab.vercel.app](https://theuzairlab.vercel.app)
-- LinkedIn: [@uzairullah](https://linkedin.com/in/uzairullah)
-- GitHub: [@Uzairmalik1](https://github.com/Uzairmalik1)
+- LinkedIn: [@uzairullah](https://linkedin.com/in/uzairullah-)
+- GitHub: [@Uzairmalik1](https://github.com/theuzairlab)
 
 ## 🙏 Acknowledgments
 
@@ -133,7 +133,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any queries or collaboration opportunities:
 - Email: uzairullah397@gmail.com
-- LinkedIn: [Uzair Ullah](https://linkedin.com/in/uzairullah)
+- LinkedIn: [Uzair Ullah](https://linkedin.com/in/uzairullah-)
 
 ---
 

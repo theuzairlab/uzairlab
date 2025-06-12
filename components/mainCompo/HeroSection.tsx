@@ -9,7 +9,7 @@ const HeroSection = () => {
     const [rotatedText, setRotatedText] = useState<JSX.Element[]>([]);
 
     useEffect(() => {
-        const originalText = "I'm Frontend Developer, I'm MERN Stack Developer, I'm Desinger and I'm Freelancer.";
+        const originalText = "I'm a Full Stack Developer, AI Integration Specialist, SaaS Developer & Innovator.";
         setRotatedText(
             originalText.split("").map((char, i) => (
                 <b key={i} style={{ transform: `rotate(${i * 4.3}deg)` }}>{char}</b>
@@ -35,9 +35,9 @@ const HeroSection = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
 
-                        <Link href={'/contact'} className="bg-[#c9f31d] cursor-pointer text-black px-6 py-2 rounded-lg font-semibold z-50">Hire Me &gt;</Link>
+                        <Link href={'#contact'} className="bg-[#c9f31d] cursor-pointer text-black px-6 py-2 rounded-lg font-semibold z-10"> Get in touch &gt;</Link>
 
-                        <a href="/uzair_cv.pdf" target="_blank" className="text-gray-300 hover:text-[#c9f31d] cursor-pointer transition-all z-50">
+                        <a href="/uzair_cv.pdf" target="_blank" className="text-gray-300 hover:text-[#c9f31d] cursor-pointer transition-all z-10">
                             Download Resume &gt;
                         </a>
                     </div>

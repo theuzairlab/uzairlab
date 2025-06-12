@@ -3,7 +3,7 @@ import "tailwindcss/tailwind.css";
 
 const MovingLines = () => {
   return (
-    <div className="absolute  left-[-3%] w-[95%] h-full animate-moveLine">
+    <div className="absolute inset-0 w-full h-full animate-moveLine overflow-hidden">
       {[...Array(9)].map((_, i) => (
         <span
           key={i}
