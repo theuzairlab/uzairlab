@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import MovingLines from '../MovingLines'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
@@ -23,7 +23,7 @@ const testimonials = [
     role: "Founder",
     company: "Andazenu",
     image: "/taseer-1.webp",
-    content: "Uzair did an amazing job building our e-commerce site. From the design to the tech behind it, everything turned out exactly how we wanted. He’s super professional and easy to work with.",
+    content: "Uzair did an amazing job building our e-commerce site. From the design to the tech behind it, everything turned out exactly how we wanted. He's super professional and easy to work with.",
     rating: 5,
     location: "Peshawar, Pakistan"
   }
@@ -32,18 +32,21 @@ const testimonials = [
 const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.5 }}
-      className="bg-gray-900 rounded-xl p-6 relative border border-gray-800"
+      className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-8 relative border border-gray-800 hover:border-[#C9F31D] transition-all duration-300 group backdrop-blur-sm"
     >
-      <div className="absolute top-6 right-6 text-[#C9F31D]">
-        <Quote className="w-8 h-8 opacity-50" />
+      {/* Glowing effect */}
+      <div className="absolute inset-0 bg-[#C9F31D] rounded-xl opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+      
+      <div className="absolute -top-4 -right-4 text-[#C9F31D] bg-gray-900/80 p-4 rounded-xl border border-gray-800 backdrop-blur-sm">
+        <Quote className="w-8 h-8" />
       </div>
 
-      <div className="flex items-center gap-4 mb-6">
-        <div className="relative w-16 h-16 rounded-full overflow-hidden">
+      <div className="flex items-center gap-6 mb-8">
+        <div className="relative w-20 h-20 rounded-xl overflow-hidden border-2 border-gray-800 group-hover:border-[#C9F31D] transition-colors duration-300">
           <Image
             src={testimonial.image}
             alt={testimonial.name}
@@ -52,20 +55,20 @@ const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
           />
         </div>
         <div>
-          <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
-          <p className="text-[#C9F31D] text-sm">{testimonial.role}</p>
+          <h4 className="text-xl font-semibold text-white group-hover:text-[#C9F31D] transition-colors duration-300">{testimonial.name}</h4>
+          <p className="text-[#C9F31D] text-sm font-medium">{testimonial.role}</p>
           <p className="text-gray-400 text-sm">{testimonial.company}</p>
         </div>
       </div>
 
-      <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+      <p className="text-gray-300 text-lg leading-relaxed mb-6 italic">"{testimonial.content}"</p>
 
-      <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-800">
-        <div className="flex items-center">
+      <div className="flex items-center justify-between mt-6 pt-6 border-t border-gray-800">
+        <div className="flex items-center gap-1">
           {[...Array(testimonial.rating)].map((_, i) => (
             <svg
               key={i}
-              className="w-4 h-4 text-yellow-400"
+              className="w-5 h-5 text-yellow-400"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -73,7 +76,10 @@ const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
             </svg>
           ))}
         </div>
-        <span className="text-gray-400 text-sm">{testimonial.location}</span>
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-[#C9F31D]" />
+          <span className="text-gray-400 text-sm">{testimonial.location}</span>
+        </div>
       </div>
     </motion.div>
   )
@@ -81,7 +87,8 @@ const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
 
 const Testimonials = () => {
   const [currentPage, setCurrentPage] = useState(0)
-  const testimonialsPerPage = 2
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const testimonialsPerPage = isMobile ? 1 : 2
   const totalPages = Math.ceil(testimonials.length / testimonialsPerPage)
 
   const nextPage = () => {
@@ -106,36 +113,50 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <p className="text-lg font-bold text-slate-400">Testimonials</p>
-          <h2 className="text-5xl font-normal mt-2">Client <span className="text-[#C9F31D]">Feedback</span></h2>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          <h2 className="text-5xl font-normal mt-2 mb-4">Client <span className="text-[#C9F31D]">Feedback</span></h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-gray-400 text-lg max-w-2xl mx-auto"
+          >
             Hear what my clients have to say about their experience working with me and the results we achieved together.
-          </p>
+          </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          {currentTestimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <AnimatePresence mode="wait">
+            {currentTestimonials.map((testimonial) => (
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+            ))}
+          </AnimatePresence>
         </div>
 
-        <div className="flex items-center justify-center gap-4 mt-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex items-center justify-center gap-6"
+        >
           <button
             onClick={prevPage}
-            className="p-2 rounded-full bg-gray-900 text-white hover:bg-[#C9F31D] hover:text-black transition-colors"
+            className="p-3 rounded-xl bg-gray-900/80 text-white hover:bg-[#C9F31D] hover:text-black transition-all duration-300 border border-gray-800 hover:border-[#C9F31D] backdrop-blur-sm"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             {[...Array(totalPages)].map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentPage(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  i === currentPage ? 'w-6 bg-[#C9F31D]' : 'bg-gray-700'
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === currentPage 
+                    ? 'w-8 bg-[#C9F31D]' 
+                    : 'w-2 bg-gray-700 hover:bg-gray-600'
                 }`}
               />
             ))}
@@ -143,11 +164,11 @@ const Testimonials = () => {
 
           <button
             onClick={nextPage}
-            className="p-2 rounded-full bg-gray-900 text-white hover:bg-[#C9F31D] hover:text-black transition-colors"
+            className="p-3 rounded-xl bg-gray-900/80 text-white hover:bg-[#C9F31D] hover:text-black transition-all duration-300 border border-gray-800 hover:border-[#C9F31D] backdrop-blur-sm"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -156,8 +177,14 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-gray-400">
-            Want to share your experience? <span className="text-[#C9F31D]"><Link href="#contact">Get in touch</Link></span>
+          <p className="text-gray-400 text-lg">
+            Want to share your experience?{' '}
+            <Link 
+              href="#contact" 
+              className="text-[#C9F31D] hover:underline transition-all duration-300"
+            >
+              Get in touch
+            </Link>
           </p>
         </motion.div>
       </div>

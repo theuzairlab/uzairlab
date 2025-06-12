@@ -34,7 +34,7 @@ const NavBar = () => {
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-screen bg-black/60 shadow-lg z-50 flex items-center justify-between px-10 md:px-36 py-3 backdrop-blur-sm">
         <div className="logo_box">
-          <a onClick={(e) => handleScroll(e, 'home')} className="logo text-2xl cursor-pointer">Uzair's Lab</a>
+          <a onClick={(e) => handleScroll(e, 'home')} className="logo text-2xl cursor-pointer whitespace-nowrap">Uzair's Lab</a>
         </div>
 
         <ul className="hidden md:flex space-x-10 text-gray-300">

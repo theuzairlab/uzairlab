@@ -13,7 +13,7 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, and Ta
 
 ## 🚀 Live Demo
 
-[Visit The Uzair's Lab](https://theuzairlab.vercel.app)
+[Visit The Uzair's Lab](https://uzairlab.vercel.app)
 
 ## 🛠️ Tech Stack
 
@@ -119,7 +119,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👤 Author
 
 **Uzair Ullah**
-- Website: [theuzairlab.vercel.app](https://theuzairlab.vercel.app)
+- Website: [theuzairlab.vercel.app](https://uzairlab.vercel.app)
 - LinkedIn: [@uzairullah](https://linkedin.com/in/uzairullah-)
 - GitHub: [@Uzairmalik1](https://github.com/theuzairlab)
 
