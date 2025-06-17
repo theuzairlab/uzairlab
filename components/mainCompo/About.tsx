@@ -14,7 +14,7 @@ const personalInfo = {
 
 const socialLinks = [
   {
-    link: "https://www.linkedin.com/in/uzairullah-",
+    link: "https://www.linkedin.com/in/uzairlab",
     icon: <Linkedin />
   },
   {
@@ -22,7 +22,7 @@ const socialLinks = [
     icon: <Github />
   },
   {
-    link: "https://web.facebook.com/profile.php?id=100035006707888",
+    link: "https://web.facebook.com/uzairlab",
     icon: <Facebook />
   },
   {
@@ -44,19 +44,19 @@ const statsData = [
   },
   {
     title: "Projects Completed",
-    value: "3+",
+    value: "5+",
     icon: <Code2 className="w-6 h-6" />,
     description: "Web Development"
   },
   {
     title: "Clients Served",
-    value: "1+",
+    value: "5+",
     icon: <Users className="w-6 h-6" />,
     description: "Worldwide"
   },
   {
     title: "Technologies",
-    value: "10+",
+    value: "20+",
     icon: <Award className="w-6 h-6" />,
     description: "Modern Stack"
   }
