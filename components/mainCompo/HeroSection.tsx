@@ -27,11 +27,12 @@ const HeroSection = () => {
                 <div className="w-full md:w-1/2 mb-14 mt-72 sm:mt-0 md:mb-0 flex flex-col items-center md:items-start">
                     <h4 className="text-xl md:text-5xl opacity-50 pb-3 md:pb-6">Hello, I'm</h4>
                     <h1 className="text-3xl md:text-7xl font-semibold text-[#c9f31d] pb-3 md:pb-6">Uzair Ullah.</h1>
-                    <h2 className="text-2xl md:text-6xl font-semibold text-white opacity-80 pb-3 md:pb-6">Full Stack Developer</h2>
-                    <p className="text-gray-400 text-sm md:text-lg font-semibold  mb-6 md:mb-10 max-w-md md:max-w-lg">
-                        Unlock the power of digital transformation with my expertise. I build
-                        scalable and high-performance web applications tailored to your
-                        business needs. Let's bring your vision to life!
+                    <h2 className="text-2xl md:text-6xl font-semibold text-white opacity-80 pb-1 md:pb-2">Software Developer</h2>
+                    <h3 className="text-xl font-medium text-white opacity-80 pb-3 md:pb-6">Building AI-Powered Applications to Simplify Digital Workflows</h3>
+                    <p className="text-gray-400 text-sm md:text-lg font-medium  mb-6 md:mb-10 max-w-md md:max-w-lg">
+                        I’m Uzair, a software developer with a passion for building intelligent, user-focused web applications. I’ve developed a platform that generates viral short videos from long-form content and helped optimize backend systems for faster performance. My work has improved efficiency for both creators and developers.
+                        <br/>
+                        I’m skilled in <span className="text-[#c9f31d]">Python</span>, <span className="text-[#1d88f3]">JavaScript (React/Next.js)</span>, <span className="text-[#c9f31d]">FastAPI</span>, and deploying cloud-based solutions.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
 
