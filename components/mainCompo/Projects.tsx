@@ -12,8 +12,12 @@ const projectsData = [
     name: "Editor.ai",
     logo: "/Aditur.png",
     screenshot: "/editur-ai.png",
-    shortDescription: "AI-powered video editing platform with auto-subtitles and trending highlights generation",
-    fullDescription: `Editor.ai is a cutting-edge video editing platform that leverages artificial intelligence to streamline the editing process. The platform automatically generates subtitles, identifies trending moments, and suggests optimal cuts based on content analysis.
+    shortDescription: "This is a video editing platform that I developed using AI technologies for a content automation startup in May 2025",
+    fullDescription: `Editur.ai is an intelligent, AI-powered video editing platform that automatically generates short viral clips from long-form videos. It features smart subtitle generation, auto-cropping for social formats, and content scheduling tools.
+
+This platform was developed for Editur.ai, a startup focused on streamlining video content creation for influencers and marketers.
+
+I’m proud of how this project combined my technical and creative skills to help creators save time and grow their audience.
 
 Key Features:
 • Automatic subtitle generation with multi-language support
@@ -55,8 +59,12 @@ Key Features:
     name: "Andazenu (T-Shirt E-Commerce)",
     logo: "/andazenu.png",
     screenshot: "/andazenu-1.png",
-    shortDescription: "Modern, minimal t-shirt e-commerce platform with real-time inventory and admin dashboard",
-    fullDescription: `Andazenu is a modern t-shirt e-commerce platform designed for the Pakistani market. Built with performance and scalability in mind, it offers real-time inventory tracking, order management, and an admin dashboard. The platform uses a clean, mobile-friendly UI, and integrates AI-based product sorting and OTP-based checkout for secure local transactions.
+    shortDescription: "This is an e-commerce website that I designed and built from scratch for a fashion brand in Pakistan in April 2025",
+    fullDescription: `Andazenu is a minimal, mobile-first clothing store featuring custom design, secure checkout, and modern admin tools for order management. The site supports product uploads, sales tracking, and image hosting through ImageKit.
+
+This platform was created for a local fashion brand targeting Gen Z and digital buyers across Pakistan.
+
+It was a rewarding experience to lead both the design and development of this project and help bring the brand’s vision to life.
   
   Key Features:
   • Product browsing with real-time stock updates  
@@ -115,7 +123,7 @@ Key Features:
     github: "https://github.com/abdulmalikshakir2001/teseer-portfolio",
     category: "Portfolio & Blog"
   }
-  
+
 ]
 
 const ProjectCard = ({ project, onSelect }: { project: any; onSelect: (project: any) => void }) => {
@@ -137,7 +145,7 @@ const ProjectCard = ({ project, onSelect }: { project: any; onSelect: (project: 
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-30 transition-all duration-300" />
       </div>
-      
+
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-[#C9F31D] transition-colors">
           {project.name}
@@ -145,7 +153,7 @@ const ProjectCard = ({ project, onSelect }: { project: any; onSelect: (project: 
         <p className="text-gray-400 mb-4 line-clamp-2">
           {project.shortDescription}
         </p>
-        
+
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.slice(0, 3).map((tech: string, index: number) => (
             <span
@@ -161,7 +169,7 @@ const ProjectCard = ({ project, onSelect }: { project: any; onSelect: (project: 
             </span>
           )}
         </div>
-        
+
         <div className="flex items-center text-sm text-gray-400">
           <span>View Details</span>
           <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -255,8 +263,8 @@ const Projects = () => {
 
   return (
     <div className="w-full min-h-screen bg-[#070707] text-white py-20 relative overflow-hidden">
-     
-      
+
+
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
