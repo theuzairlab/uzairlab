@@ -122,6 +122,40 @@ It was a rewarding experience to lead both the design and development of this pr
     liveDemo: "https://teseer-portfolio.vercel.app/",
     github: "https://github.com/abdulmalikshakir2001/teseer-portfolio",
     category: "Portfolio & Blog"
+  },
+  {
+    id: 4,
+    name: "WrenchEX",
+    logo: "/wrenchex-logo.png",
+    screenshot: "/wrenchex.png",
+    shortDescription: "A marketplace for auto spare parts and workshop services — sellers, buyers and workshops in one place.",
+    fullDescription: `WrenchEX is a full-featured spare-parts marketplace and service booking platform that connects sellers (mechanics, workshops, spare-parts shops) with buyers looking for parts or repair services. Designed for reliability and scale, WrenchEX focuses on role-based experiences, easy product uploads, and tools that help sellers manage stores while giving buyers a smooth search, purchase and booking flow.
+
+    Key Features:
+    • Role-based authentication and dashboards for Admin, Seller, and Buyer.
+    • Seller product management with rich attributes (compatibility, brand, warranty, images).
+    • AI-assisted product upload (extract specs from images/descriptions) and automated admin review.
+    • Cart, orders, and commission-based payouts for sellers.
+    • Service booking & appointment scheduler for workshops with time-slot management.
+    • OAuth + JWT for secure auth (social logins and token-based API).
+    • Image handling and CDN-backed media delivery for fast product images.
+    • Notifications, activity feed, and seller analytics.
+    • Mobile-ready architecture with a planned React Native (Expo) app for buyers & sellers.
+    • Admin tools for moderation, disputes, and platform analytics.`,
+    role: "Full Stack Developer",
+    technologies: [
+      "Next.js (App Router)",
+      "Express.js (REST API)",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "TypeScript",
+      "JWT / OAuth",
+      "Image CDN (for product media)",
+      "Vercel (frontend) / Custom backend hosting"
+    ],
+    liveDemo: "https://wrenchex.vercel.app/",
+    github: "https://github.com/theuzairlab/wrenchex_frontend",
+    category: "Marketplace & E-commerce"
   }
 
 ]
