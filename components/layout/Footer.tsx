@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="font-display text-2xl font-bold text-foreground">
-            &lt; UZAIR'S<span className="text-accent-green">.LAB</span> /&gt;
+            &lt; UZAIR&apos;S<span className="text-accent-green">.LAB</span> /&gt;
             </Link>
             <p className="text-muted-custom text-sm leading-relaxed max-w-xs">
               Full-stack engineer & product builder. I architect, ship, and own

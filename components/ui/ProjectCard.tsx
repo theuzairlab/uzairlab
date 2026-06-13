@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import type { Project } from "@/data/projects";
 import StatusBadge from "@/components/ui/StatusBadge";
 import TechTag from "@/components/ui/TechTag";

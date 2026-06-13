@@ -51,7 +51,7 @@ export default function Navbar() {
             onClick={(e) => handleScroll(e, "home")}
             className="font-display text-xl font-bold text-white cursor-pointer"
           >
-            &lt; UZAIR'S<span className="text-accent-green">.LAB</span> /&gt;
+            &lt; UZAIR&apos;S<span className="text-accent-green">.LAB</span> /&gt;
           </a>
 
           <ul className="hidden md:flex items-center gap-8">
