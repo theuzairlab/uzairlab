@@ -1,42 +1,29 @@
-"use server"
-import About from "@/components/mainCompo/About";
-import Contact from "@/components/mainCompo/Contact";
-import Experiance from "@/components/mainCompo/Experiance";
-import HeroSection from "@/components/mainCompo/HeroSection";
-import Projects from "@/components/mainCompo/Projects";
-import Services from "@/components/mainCompo/Services";
-import Skills from "@/components/mainCompo/Skills";
-import Testimonials from "@/components/mainCompo/Testimonials";
+import Hero from "@/components/sections/Hero";
+import WhatISolve from "@/components/sections/WhatISolve";
+import Projects from "@/components/sections/Projects";
+import Experience from "@/components/sections/Experience";
+import TechStack from "@/components/sections/TechStack";
+import About from "@/components/sections/About";
+import Testimonials from "@/components/sections/Testimonials";
+import Pricing from "@/components/sections/Pricing";
+import NewsBlogs from "@/components/sections/NewsBlogs";
+import Contact from "@/components/sections/Contact";
+import ClientLogos from "@/components/sections/ClientLogos";
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
-    <div className="">
-      <section id="home">
-        <HeroSection/>
-      </section>
-      <section id="about">
-        <About/>
-      </section>
-      <section id="experience">
-        <Experiance/>
-      </section>
-      <section id="skills">
-        <Skills/>
-      </section>
-      <section id="services">
-        <Services/>
-      </section>
-      <section id="projects">
-        <Projects/>
-      </section>
-      <section id="testimonials">
-        <Testimonials/>
-      </section>
-      <section id="contact">
-        <Contact/>
-      </section>
-    </div>
+      <Hero />
+      <WhatISolve />
+      <Projects />
+      <Experience />
+      <TechStack />
+      <About />
+      <Testimonials />
+      <Pricing />
+      <NewsBlogs />
+      <Contact />
+      <ClientLogos />
     </>
   );
 }

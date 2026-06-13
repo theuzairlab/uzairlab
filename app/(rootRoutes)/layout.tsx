@@ -1,15 +1,14 @@
-import Footer from "@/components/mainCompo/Footer";
-import NavBar from "@/components/Navbar";
-import { SessionProvider } from "next-auth/react";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
-export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
-    return (
-        <SessionProvider>
-            <main className="overflow-hidden">
-                <NavBar />
-                {children}
-                <Footer/>
-            </main>
-        </SessionProvider>
-    );
+export default function Layout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <main className="overflow-hidden">
+      <Navbar />
+      {children}
+      <Footer />
+    </main>
+  );
 }
