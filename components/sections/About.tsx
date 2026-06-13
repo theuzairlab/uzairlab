@@ -54,8 +54,7 @@ export default function About() {
             className="space-y-4 text-muted-custom leading-relaxed"
           >
             <p>
-              I grew up in a region where the internet infrastructure itself was
-              the bottleneck. That gave me a different perspective — I had to
+            I grew up where resources were limited but ambition wasn&apos;t. That gave me a different perspective — I had to
               understand the whole system, not just the layer I was hired to work
               on.
             </p>
